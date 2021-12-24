@@ -6,17 +6,17 @@ using namespace std;
 int doDai(string s)
 {
     int cnt = 0;
-    for(int i = 0; s[i] != NULL ; i++) 
-    	cnt++;
+    for (int i = 0; s[i] != NULL; i++)
+        cnt++;
     return cnt;
 }
- 
+
 string daoNguoc(string s)
 {
     string dao("");
     int l = doDai(s);
-    for(int i = l-1; i >= 0; --i) 
-		dao += s[i];
+    for (int i = l - 1; i >= 0; --i)
+        dao += s[i];
     return dao;
 }
 
@@ -68,22 +68,22 @@ void muc_02(int n)
     }
 }
 
-int main(){
-	int n ;
+int main() {
+    int n;
     freopen("input.txt", "r", stdin);
-  	cin>>n;
-  	if(n>100)
-  	{
-  		cout << "Nhap lai tham so n<=100 trong file";
-	}
-	else{
-		if(n<=3)
-			cout << "Do dai n khong du de thuc hien bai toan";
-		else{
-			cout <<  "Chuoi 01 xuat hien 2 lan \n";
-			muc_02(n);
-		}
-	}
-
-	return 0;
+    cin >> n;
+    if (n > 100)
+    {
+        cout << "Nhap lai tham so n<=100 trong file";
+    }
+    else {
+        if (n <= 3)
+            cout << "Do dai n khong du de thuc hien bai toan";
+        else {
+            cout << "Chuoi 01 xuat hien 2 lan \n";
+            muc_02(n);
+        }
+    }
+    return 0;
 }
+
