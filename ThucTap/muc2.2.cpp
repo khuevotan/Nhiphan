@@ -38,7 +38,7 @@ void muc_02(int n)
             cout << h << "\n";
         }
     }
-
+ 
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 2; j < n - 1; j++)
@@ -65,7 +65,7 @@ void muc_02(int n)
                 dem = 0;
             }
         }
-    }
+    } 
 }
 
 int main() {
