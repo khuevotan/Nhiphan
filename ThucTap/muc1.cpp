@@ -33,30 +33,30 @@ void muc_01()
     cout <<"Hay nhap n: ";
     cin >> n ;
     
-    //Chuyen thap phan sang nhi phan
     for( ll i = 0 ; i < (1LL << n) ; i++ )
     {
         ll x = i;
         string s = "";
-        for( int j=0; j < n ; j++ )
+        while (x!=0)
         {
-            if(x%2)
+            if(x%2 == 1)
                 s=s+"1";
             else
                 s=s+"0";
             x/=2;
         }
         
+        if(s == "")
+        	s= "0";
+        else
         for(ll i = doDai(s)-1; i > 0; --i)
         {
-            if(s[i] == '1' || doDai(s) == 1) 
+            if(s[i] == '1' || doDai(s) == 1 )
 				break;
             else
-            {
                 s = xoaKyTuCuoi(s);
-            }
         }
-        
+	
         s = daoNguoc(s);
         cout << s << "\n";
     }

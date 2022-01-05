@@ -39,7 +39,8 @@ void muc_02(int n)
             cout << h << "\n";
         }
     }
- 	
+    
+ 	cout <<  "\n";
  	if (n > 4)
     for (int i = 0; i < n - 1; i++)
     {
