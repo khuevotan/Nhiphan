@@ -22,6 +22,7 @@ string daoNguoc(string s)
 
 void muc_02(int n)
 {
+	
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 2; j < n - 1; j++)
@@ -38,7 +39,8 @@ void muc_02(int n)
             cout << h << "\n";
         }
     }
- 
+ 	
+ 	if (n > 4)
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 2; j < n - 1; j++)
