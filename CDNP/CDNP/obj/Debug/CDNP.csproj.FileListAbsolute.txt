@@ -1,0 +1,14 @@
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\bin\Debug\CDNP.exe.config
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\bin\Debug\CDNP.exe
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\bin\Debug\CDNP.pdb
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form1.resources
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Properties.Resources.resources
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.csproj.GenerateResource.cache
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.csproj.CoreCompileInputs.cache
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.exe
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.pdb
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form2.resources
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.csprojAssemblyReference.cache
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form3.resources
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form4.resources
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form5.resources
