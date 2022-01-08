@@ -12,3 +12,4 @@ C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.csprojAssemblyReferenc
 C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form3.resources
 C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form4.resources
 C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form5.resources
+C:\Users\THIS PC\Desktop\Nhiphan\CDNP\CDNP\obj\Debug\CDNP.Form6.resources
