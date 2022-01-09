@@ -53,15 +53,16 @@
             // txt1
             // 
             this.txt1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt1.Location = new System.Drawing.Point(120, 140);
+            this.txt1.Location = new System.Drawing.Point(123, 145);
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(100, 26);
             this.txt1.TabIndex = 0;
+            this.txt1.TextChanged += new System.EventHandler(this.txt1_TextChanged);
             // 
             // btn2
             // 
             this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn2.Location = new System.Drawing.Point(530, 372);
+            this.btn2.Location = new System.Drawing.Point(533, 377);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(91, 43);
             this.btn2.TabIndex = 3;
@@ -72,7 +73,7 @@
             // btn3
             // 
             this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn3.Location = new System.Drawing.Point(68, 372);
+            this.btn3.Location = new System.Drawing.Point(34, 377);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(113, 43);
             this.btn3.TabIndex = 4;
@@ -85,7 +86,7 @@
             this.lbl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(26, 140);
+            this.lbl2.Location = new System.Drawing.Point(29, 145);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(88, 26);
             this.lbl2.TabIndex = 7;
@@ -98,7 +99,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Info;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(169, 69);
+            this.label1.Location = new System.Drawing.Point(186, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(318, 36);
             this.label1.TabIndex = 9;
@@ -108,17 +109,17 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 453);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(15, 453);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(503, 20);
+            this.label2.Size = new System.Drawing.Size(562, 22);
             this.label2.TabIndex = 11;
             this.label2.Text = "Chú ý: Có thể xem kết quả trong file out1.txt ở thư mục Debug";
             // 
             // rtxt1
             // 
             this.rtxt1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtxt1.Location = new System.Drawing.Point(271, 174);
+            this.rtxt1.Location = new System.Drawing.Point(274, 192);
             this.rtxt1.Name = "rtxt1";
             this.rtxt1.Size = new System.Drawing.Size(350, 164);
             this.rtxt1.TabIndex = 12;
@@ -129,7 +130,7 @@
             this.lbl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(266, 136);
+            this.lbl3.Location = new System.Drawing.Point(269, 146);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(98, 26);
             this.lbl3.TabIndex = 13;
@@ -149,14 +150,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 52);
+            this.panel1.Size = new System.Drawing.Size(678, 52);
             this.panel1.TabIndex = 14;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(582, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(588, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 52);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -168,7 +169,7 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(612, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(618, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -180,7 +181,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(642, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(648, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -199,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(672, 488);
+            this.ClientSize = new System.Drawing.Size(678, 499);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.rtxt1);

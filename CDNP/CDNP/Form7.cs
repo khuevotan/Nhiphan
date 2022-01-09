@@ -18,11 +18,10 @@ namespace CDNP
             pic1.Hide();
             pic2.Hide();
         }
-
         private async void button3_Click(object sender, EventArgs e)
         {
             pic1.Show();
-            await Task.Delay(2000);
+            
             pic2.Show();
         }
     }

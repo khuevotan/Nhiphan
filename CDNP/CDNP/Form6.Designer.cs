@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,8 +61,6 @@
             this.pic9 = new System.Windows.Forms.PictureBox();
             this.pic10 = new System.Windows.Forms.PictureBox();
             this.pic11 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,31 +93,20 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Location = new System.Drawing.Point(176, 277);
+            this.panel1.Location = new System.Drawing.Point(148, 277);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(869, 153);
             this.panel1.TabIndex = 13;
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(846, 129);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 45);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(702, 130);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(844, 120);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 46);
+            this.button1.Size = new System.Drawing.Size(135, 52);
             this.button1.TabIndex = 11;
             this.button1.Text = "Chuyển Đổi";
             this.button1.UseVisualStyleBackColor = true;
@@ -129,7 +115,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(370, 138);
+            this.textBox1.Location = new System.Drawing.Point(374, 130);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(104, 26);
@@ -140,7 +126,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 136);
+            this.label1.Location = new System.Drawing.Point(111, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(235, 29);
@@ -154,7 +140,7 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Location = new System.Drawing.Point(176, 478);
+            this.panel2.Location = new System.Drawing.Point(148, 478);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(869, 162);
@@ -169,7 +155,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1063, 54);
+            this.panel3.Size = new System.Drawing.Size(1063, 48);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox3
@@ -178,7 +164,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(973, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 54);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -190,7 +176,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1003, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 54);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -202,7 +188,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1033, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -218,11 +204,11 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Info;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(429, 69);
+            this.label3.Location = new System.Drawing.Point(447, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(250, 46);
+            this.label3.Size = new System.Drawing.Size(225, 40);
             this.label3.TabIndex = 17;
             this.label3.Text = "MÔ PHỎNG";
             // 
@@ -236,7 +222,7 @@
             this.lbl4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl4.AutoSize = true;
             this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.Location = new System.Drawing.Point(882, 635);
+            this.lbl4.Location = new System.Drawing.Point(157, 648);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(0, 32);
             this.lbl4.TabIndex = 18;
@@ -246,26 +232,28 @@
             this.lbl5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.Location = new System.Drawing.Point(765, 635);
+            this.lbl5.Location = new System.Drawing.Point(40, 648);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(0, 32);
             this.lbl5.TabIndex = 19;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(114, 443);
+            this.label4.Location = new System.Drawing.Point(41, 443);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 29);
+            this.label4.Size = new System.Drawing.Size(76, 29);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Dư";
+            this.label4.Text = "Số dư";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(171, 182);
+            this.label5.Location = new System.Drawing.Point(20, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(201, 29);
             this.label5.TabIndex = 21;
@@ -273,8 +261,9 @@
             // 
             // pic1
             // 
+            this.pic1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic1.Image = ((System.Drawing.Image)(resources.GetObject("pic1.Image")));
-            this.pic1.Location = new System.Drawing.Point(214, 222);
+            this.pic1.Location = new System.Drawing.Point(186, 222);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(135, 44);
             this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,8 +273,9 @@
             // 
             // pic12
             // 
+            this.pic12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic12.Image = ((System.Drawing.Image)(resources.GetObject("pic12.Image")));
-            this.pic12.Location = new System.Drawing.Point(385, 613);
+            this.pic12.Location = new System.Drawing.Point(454, 613);
             this.pic12.Name = "pic12";
             this.pic12.Size = new System.Drawing.Size(187, 54);
             this.pic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -294,9 +284,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(283, 696);
+            this.label6.Location = new System.Drawing.Point(435, 670);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(224, 29);
             this.label6.TabIndex = 24;
@@ -304,8 +295,9 @@
             // 
             // pic2
             // 
+            this.pic2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic2.Image = ((System.Drawing.Image)(resources.GetObject("pic2.Image")));
-            this.pic2.Location = new System.Drawing.Point(371, 220);
+            this.pic2.Location = new System.Drawing.Point(343, 220);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(135, 44);
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,8 +307,9 @@
             // 
             // pic3
             // 
+            this.pic3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic3.Image = ((System.Drawing.Image)(resources.GetObject("pic3.Image")));
-            this.pic3.Location = new System.Drawing.Point(530, 222);
+            this.pic3.Location = new System.Drawing.Point(502, 222);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(135, 44);
             this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -326,8 +319,9 @@
             // 
             // pic4
             // 
+            this.pic4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic4.Image = ((System.Drawing.Image)(resources.GetObject("pic4.Image")));
-            this.pic4.Location = new System.Drawing.Point(685, 222);
+            this.pic4.Location = new System.Drawing.Point(657, 222);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(135, 44);
             this.pic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -337,8 +331,9 @@
             // 
             // pic5
             // 
+            this.pic5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic5.Image = ((System.Drawing.Image)(resources.GetObject("pic5.Image")));
-            this.pic5.Location = new System.Drawing.Point(828, 222);
+            this.pic5.Location = new System.Drawing.Point(800, 222);
             this.pic5.Name = "pic5";
             this.pic5.Size = new System.Drawing.Size(135, 44);
             this.pic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -348,8 +343,9 @@
             // 
             // pic6
             // 
+            this.pic6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic6.Image = ((System.Drawing.Image)(resources.GetObject("pic6.Image")));
-            this.pic6.Location = new System.Drawing.Point(189, 401);
+            this.pic6.Location = new System.Drawing.Point(161, 401);
             this.pic6.Name = "pic6";
             this.pic6.Size = new System.Drawing.Size(60, 71);
             this.pic6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -358,8 +354,9 @@
             // 
             // pic7
             // 
+            this.pic7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic7.Image = ((System.Drawing.Image)(resources.GetObject("pic7.Image")));
-            this.pic7.Location = new System.Drawing.Point(329, 401);
+            this.pic7.Location = new System.Drawing.Point(301, 401);
             this.pic7.Name = "pic7";
             this.pic7.Size = new System.Drawing.Size(60, 71);
             this.pic7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,8 +365,9 @@
             // 
             // pic8
             // 
+            this.pic8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic8.Image = ((System.Drawing.Image)(resources.GetObject("pic8.Image")));
-            this.pic8.Location = new System.Drawing.Point(465, 401);
+            this.pic8.Location = new System.Drawing.Point(437, 401);
             this.pic8.Name = "pic8";
             this.pic8.Size = new System.Drawing.Size(60, 71);
             this.pic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -378,8 +376,9 @@
             // 
             // pic9
             // 
+            this.pic9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic9.Image = ((System.Drawing.Image)(resources.GetObject("pic9.Image")));
-            this.pic9.Location = new System.Drawing.Point(619, 399);
+            this.pic9.Location = new System.Drawing.Point(591, 399);
             this.pic9.Name = "pic9";
             this.pic9.Size = new System.Drawing.Size(60, 71);
             this.pic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -388,8 +387,9 @@
             // 
             // pic10
             // 
+            this.pic10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic10.Image = ((System.Drawing.Image)(resources.GetObject("pic10.Image")));
-            this.pic10.Location = new System.Drawing.Point(760, 401);
+            this.pic10.Location = new System.Drawing.Point(732, 401);
             this.pic10.Name = "pic10";
             this.pic10.Size = new System.Drawing.Size(60, 71);
             this.pic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,33 +398,14 @@
             // 
             // pic11
             // 
+            this.pic11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic11.Image = ((System.Drawing.Image)(resources.GetObject("pic11.Image")));
-            this.pic11.Location = new System.Drawing.Point(903, 401);
+            this.pic11.Location = new System.Drawing.Point(875, 401);
             this.pic11.Name = "pic11";
             this.pic11.Size = new System.Drawing.Size(60, 71);
             this.pic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic11.TabIndex = 34;
             this.pic11.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(771, 69);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 46);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "Chạy";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(214, 77);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 46);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "Chạy";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form6
             // 
@@ -434,8 +415,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1063, 818);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.pic12);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pic11);
@@ -457,7 +436,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -494,7 +472,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
@@ -524,7 +501,5 @@
         private System.Windows.Forms.PictureBox pic7;
         private System.Windows.Forms.PictureBox pic10;
         private System.Windows.Forms.PictureBox pic11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
     }
 }

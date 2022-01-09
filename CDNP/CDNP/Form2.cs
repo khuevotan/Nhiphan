@@ -40,7 +40,7 @@ namespace CDNP
             rtxt1.Text = "";
             if (String.IsNullOrEmpty(txt1.Text))
             {
-                MessageBox.Show("Vui lòng nhập dữ liệu!");
+                MessageBox.Show("Vui lòng nhập n!");
             }
             else
             {
@@ -108,6 +108,11 @@ namespace CDNP
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txt1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

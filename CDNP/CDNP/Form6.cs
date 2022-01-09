@@ -31,6 +31,29 @@ namespace CDNP
             label5.Hide();
             label4.Hide();
             label6.Hide();
+            lbl4.Hide();
+            lbl5.Hide();
+        }
+
+        public void anpic()
+        {
+            pic1.Hide();
+            pic2.Hide();
+            pic3.Hide();
+            pic4.Hide();
+            pic5.Hide();
+            pic6.Hide();
+            pic7.Hide();
+            pic8.Hide();
+            pic9.Hide();
+            pic10.Hide();
+            pic11.Hide();
+            pic12.Hide();
+            label5.Hide();
+            label4.Hide();
+            label6.Hide();
+            lbl4.Hide();
+            lbl5.Hide();
         }
 
         int[] Arr;
@@ -38,11 +61,6 @@ namespace CDNP
         const int GAP = 50;
         const int HEIGHT = 100;
         const int SIZE = 50;
-        public void BubbleSort(int[] arr)
-        {
-            int i, j;
-            // MoveButton(j, j-1);
-        }
 
         private void dichuyen(int i)
         {
@@ -73,38 +91,9 @@ namespace CDNP
             System.Threading.Thread.Sleep(10);
         }
 
-        private void MoveButton(int i, int j)
-        {
-            Status st = new Status();
-            st.Pos1 = i;
-            st.Pos2 = j;
-            st.type = MoveType.MOVE_TOP_DOWN;
-            for (int x = 0; x < SIZE; x++)
-            {
-                backgroundWorker1.ReportProgress(0, st);
-                System.Threading.Thread.Sleep(10);
-            }
-            st.type = MoveType.MOVE_LEFT_RiGHT;
-            int Distance = Math.Abs(i - j) * (SIZE + GAP);
-            for (int x = 0; x < Distance; x++)
-            {
-                backgroundWorker1.ReportProgress(0, st);
-                System.Threading.Thread.Sleep(10);
-            }
-            st.type = MoveType.MOVE_IN_LINE;
-            for (int x = 0; x < SIZE; x++)
-            {
-                backgroundWorker1.ReportProgress(0, st);
-                System.Threading.Thread.Sleep(10);
-            }
-            st.type = MoveType.MOVED;
-            backgroundWorker1.ReportProgress(0, st);
-            System.Threading.Thread.Sleep(10);
-        }
-
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            BubbleSort(Arr);
+         
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -151,72 +140,181 @@ namespace CDNP
             backgroundWorker1.RunWorkerAsync();
         }
 
-        int tam = 1;
-        private void button1_Click_1(object sender, EventArgs e)
+        private async void button1_Click_1(object sender, EventArgs e)
         {
+            anpic();
+            int tam = 0;
             if (String.IsNullOrEmpty(textBox1.Text))
-            {
-                MessageBox.Show("Vui lòng nhập dữ liệu!");
-            }
+                MessageBox.Show("Không được bỏ trống n!");
             else
             {
-                label5.Show();
-                label4.Show();
-                label6.Show();
-                int n = int.Parse(textBox1.Text);
-                Arr = new int[n];
-                BArr = new Button[n];
-                panel1.Controls.Clear();
-                panel2.Controls.Clear();
-                lbl4.Text = "";
-                lbl5.Text = "";
 
-                while (n != 0)
+                int k = Convert.ToInt32(textBox1.Text);
+                if (Convert.ToInt32(k) <= 0 || Convert.ToInt32(k) > 63)
                 {
-                    int i = 0;
-                    Button btn = new Button();
-                    Button btn2 = new Button();
-                    int val = n;
-                    int sodu = n % 2;
-
-                    btn.Text = val.ToString();
-                    btn.Width = btn.Height = SIZE;
-                    btn.Location = new Point(panel1.Controls.Count * (btn.Width + GAP), panel1.Height / 2 - btn.Height);
-
-                    btn2.Text = sodu.ToString();
-                    btn2.Width = btn2.Height = SIZE;
-                    btn2.Location = new Point(panel2.Controls.Count * (btn.Width + GAP), panel2.Height / 2 - btn.Height);
-
-                    Arr[i] = val;
-                    BArr[i] = btn;
-                    panel1.Controls.Add(btn);
-
-                    Arr[i] = sodu;
-                    BArr[i] = btn2;
-                    panel2.Controls.Add(btn2);
-                    lbl4.Text = Convert.ToString(sodu) + lbl4.Text;
-
-                    btn2.BackColor = Color.ForestGreen;
-                    btn2.ForeColor = Color.White;
-
-                    n /= 2;
-                    i = i + 1;
-                    // Thread.Sleep(1000);
-                    tam = tam + 1;
+                    MessageBox.Show("Vui lòng nhập lại n (0<n<63)!");
                 }
-                lbl5.Text = "Kết Quả";
-            }    
-        }
+                else
+                {
+                    label5.Show();
+                    label4.Show();
+                    int n = int.Parse(textBox1.Text);
+                    Arr = new int[n];
+                    BArr = new Button[n];
+                    panel1.Controls.Clear();
+                    panel2.Controls.Clear();
+                    lbl4.Text = "";
+                    lbl5.Text = "";
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            //backgroundWorker1.RunWorkerAsync();
-            for (int i = 0; i <= tam; i++)
-            {
+                    while (n != 0)
+                    {
+                        int i = 0;
+                        Button btn = new Button();
+                        Button btn2 = new Button();
+                        int val = n;
+                        int sodu = n % 2;
 
-                Thread.Sleep(500);
+                        btn.Text = val.ToString();
+                        btn.Width = btn.Height = SIZE;
+                        btn.Location = new Point(panel1.Controls.Count * (btn.Width + GAP), panel1.Height / 2 - btn.Height);
+
+                        btn2.Text = sodu.ToString();
+                        btn2.Width = btn2.Height = SIZE;
+                        btn2.Location = new Point(panel2.Controls.Count * (btn.Width + GAP), panel2.Height / 2 - btn.Height);
+
+                        Arr[i] = val;
+                        BArr[i] = btn;
+                        panel1.Controls.Add(btn);
+
+                        Arr[i] = sodu;
+                        BArr[i] = btn2;
+                        panel2.Controls.Add(btn2);
+
+                        lbl4.Text = Convert.ToString(sodu) + lbl4.Text;
+
+                        btn2.BackColor = Color.ForestGreen;
+                        btn2.ForeColor = Color.White;
+
+                        n /= 2;
+                        i = i + 1;
+
+                        tam = tam + 1;
+                    }
+                    lbl5.Text = "Kết Quả";
+
+                    if (tam == 1)
+                    {
+                        await Task.Delay(2000);
+                        pic6.Show();
+                        await Task.Delay(1000);
+                    }
+
+                    if (tam == 2)
+                    {
+                        await Task.Delay(1000);
+                        pic1.Show();
+                        await Task.Delay(1000);
+                        pic6.Show();
+                        await Task.Delay(2000);
+                        pic7.Show();
+                        await Task.Delay(1000);
+                    }
+
+                    if (tam == 3)
+                    {
+                        await Task.Delay(1000);
+                        pic1.Show();
+                        await Task.Delay(1000);
+                        pic6.Show();
+                        await Task.Delay(1000);
+                        pic2.Show();
+                        await Task.Delay(1000);
+                        pic7.Show();
+                        await Task.Delay(2000);
+                        pic8.Show();
+                        await Task.Delay(1000);
+                    }
+
+                    if (tam == 4)
+                    {
+                        await Task.Delay(1000);
+                        pic1.Show();
+                        await Task.Delay(1000);
+                        pic6.Show();
+                        await Task.Delay(1000);
+                        pic2.Show();
+                        await Task.Delay(1000);
+                        pic7.Show();
+                        await Task.Delay(1000);
+                        pic3.Show();
+                        await Task.Delay(1000);
+                        pic8.Show();
+                        await Task.Delay(2000);
+                        pic9.Show();
+                        await Task.Delay(1000);
+                    }
+
+                    if (tam == 5)
+                    {
+                        await Task.Delay(1000);
+                        pic1.Show();
+                        await Task.Delay(1000);
+                        pic6.Show();
+                        await Task.Delay(1000);
+                        pic2.Show();
+                        await Task.Delay(1000);
+                        pic7.Show();
+                        await Task.Delay(1000);
+                        pic3.Show();
+                        await Task.Delay(1000);
+                        pic8.Show();
+                        await Task.Delay(1000);
+                        pic4.Show();
+                        await Task.Delay(1000);
+                        pic9.Show();
+                        await Task.Delay(2000);
+                        pic10.Show();
+                        await Task.Delay(1000);
+                    }
+
+                    if (tam == 6)
+                    {
+                        await Task.Delay(1000);
+                        pic1.Show();
+                        await Task.Delay(1000);
+                        pic6.Show();
+                        await Task.Delay(1000);
+                        pic2.Show();
+                        await Task.Delay(1000);
+                        pic7.Show();
+                        await Task.Delay(1000);
+                        pic3.Show();
+                        await Task.Delay(1000);
+                        pic8.Show();
+                        await Task.Delay(1000);
+                        pic4.Show();
+                        await Task.Delay(1000);
+                        pic9.Show();
+                        await Task.Delay(1000);
+                        pic5.Show();
+                        await Task.Delay(1000);
+                        pic10.Show();
+                        await Task.Delay(2000);
+                        pic11.Show();
+                        await Task.Delay(1000);
+                    }
+
+                    pic12.Show();
+                    label6.Show();
+                    await Task.Delay(1000);
+
+                    lbl4.Show();
+                    lbl5.Show();
+                    await Task.Delay(1000);
+                }
             }
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -237,14 +335,6 @@ namespace CDNP
                 this.WindowState = FormWindowState.Normal;
             dem = dem + 1;
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            pic1.Show();
-            Thread.Sleep(1000);
-            pic2.Show();
-        }
-
 
         private void Form6_Load(object sender, EventArgs e)
         {
@@ -279,12 +369,6 @@ namespace CDNP
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form7 f7 = new Form7();
-            f7.ShowDialog();
         }
     }
 }

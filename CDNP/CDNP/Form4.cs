@@ -18,11 +18,6 @@ namespace CDNP
             InitializeComponent();
         }
 
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btn1_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();

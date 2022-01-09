@@ -53,7 +53,7 @@
             // btn1
             // 
             this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn1.Location = new System.Drawing.Point(38, 393);
+            this.btn1.Location = new System.Drawing.Point(26, 394);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(97, 51);
             this.btn1.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 160);
+            this.label1.Location = new System.Drawing.Point(21, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 29);
             this.label1.TabIndex = 2;
@@ -85,7 +85,7 @@
             // btn2
             // 
             this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn2.Location = new System.Drawing.Point(555, 392);
+            this.btn2.Location = new System.Drawing.Point(555, 394);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(109, 52);
             this.btn2.TabIndex = 3;
@@ -97,10 +97,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 479);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(503, 20);
+            this.label2.Size = new System.Drawing.Size(562, 22);
             this.label2.TabIndex = 12;
             this.label2.Text = "Chú ý: Có thể xem kết quả trong file out2.txt ở thư mục Debug";
             // 
@@ -111,7 +111,7 @@
             this.label3.BackColor = System.Drawing.SystemColors.Info;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(21, 79);
+            this.label3.Location = new System.Drawing.Point(21, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(657, 26);
             this.label3.TabIndex = 13;
@@ -122,7 +122,7 @@
             this.lbl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(309, 150);
+            this.lbl3.Location = new System.Drawing.Point(309, 163);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(98, 26);
             this.lbl3.TabIndex = 15;
@@ -131,7 +131,7 @@
             // rtxt1
             // 
             this.rtxt1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rtxt1.Location = new System.Drawing.Point(314, 188);
+            this.rtxt1.Location = new System.Drawing.Point(314, 213);
             this.rtxt1.Name = "rtxt1";
             this.rtxt1.Size = new System.Drawing.Size(350, 164);
             this.rtxt1.TabIndex = 14;
