@@ -93,7 +93,7 @@
             // 
             this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(909, 429);
+            this.btn4.Location = new System.Drawing.Point(950, 433);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(101, 46);
             this.btn4.TabIndex = 3;

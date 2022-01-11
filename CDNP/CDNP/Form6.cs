@@ -55,6 +55,17 @@ namespace CDNP
             lbl4.Hide();
             lbl5.Hide();
         }
+        static bool IsNumeric(string value)
+        {
+            try
+            {
+                int number;
+                bool result = int.TryParse(value, out number);
+                return result;
+            }
+            catch (Exception ex)
+            { return false; }
+        }
 
         int[] Arr;
         Button[] BArr;
@@ -148,170 +159,176 @@ namespace CDNP
                 MessageBox.Show("Không được bỏ trống n!");
             else
             {
-
-                int k = Convert.ToInt32(textBox1.Text);
-                if (Convert.ToInt32(k) <= 0 || Convert.ToInt32(k) > 63)
+                if (IsNumeric(textBox1.Text) == false)
                 {
-                    MessageBox.Show("Vui lòng nhập lại n (0<n<63)!");
+                    MessageBox.Show("Vui lòng nhập số nguyên n!");
                 }
                 else
-                {
-                    label5.Show();
-                    label4.Show();
-                    int n = int.Parse(textBox1.Text);
-                    Arr = new int[n];
-                    BArr = new Button[n];
-                    panel1.Controls.Clear();
-                    panel2.Controls.Clear();
-                    lbl4.Text = "";
-                    lbl5.Text = "";
-
-                    while (n != 0)
+                {      
+                    int k = Convert.ToInt32(textBox1.Text);
+                    if (Convert.ToInt32(k) <= 0 || Convert.ToInt32(k) > 63)
                     {
-                        int i = 0;
-                        Button btn = new Button();
-                        Button btn2 = new Button();
-                        int val = n;
-                        int sodu = n % 2;
-
-                        btn.Text = val.ToString();
-                        btn.Width = btn.Height = SIZE;
-                        btn.Location = new Point(panel1.Controls.Count * (btn.Width + GAP), panel1.Height / 2 - btn.Height);
-
-                        btn2.Text = sodu.ToString();
-                        btn2.Width = btn2.Height = SIZE;
-                        btn2.Location = new Point(panel2.Controls.Count * (btn.Width + GAP), panel2.Height / 2 - btn.Height);
-
-                        Arr[i] = val;
-                        BArr[i] = btn;
-                        panel1.Controls.Add(btn);
-
-                        Arr[i] = sodu;
-                        BArr[i] = btn2;
-                        panel2.Controls.Add(btn2);
-
-                        lbl4.Text = Convert.ToString(sodu) + lbl4.Text;
-
-                        btn2.BackColor = Color.ForestGreen;
-                        btn2.ForeColor = Color.White;
-
-                        n /= 2;
-                        i = i + 1;
-
-                        tam = tam + 1;
+                        MessageBox.Show("Vui lòng nhập lại n (0<n<63)!");
                     }
-                    lbl5.Text = "Kết Quả";
-
-                    if (tam == 1)
+                    else
                     {
-                        await Task.Delay(2000);
-                        pic6.Show();
+                        label5.Show();
+                        label4.Show();
+                        int n = int.Parse(textBox1.Text);
+                        Arr = new int[n];
+                        BArr = new Button[n];
+                        panel1.Controls.Clear();
+                        panel2.Controls.Clear();
+                        lbl4.Text = "";
+                        lbl5.Text = "";
+
+                        while (n != 0)
+                        {
+                            int i = 0;
+                            Button btn = new Button();
+                            Button btn2 = new Button();
+                            int val = n;
+                            int sodu = n % 2;
+
+                            btn.Text = val.ToString();
+                            btn.Width = btn.Height = SIZE;
+                            btn.Location = new Point(panel1.Controls.Count * (btn.Width + GAP), panel1.Height / 2 - btn.Height);
+
+                            btn2.Text = sodu.ToString();
+                            btn2.Width = btn2.Height = SIZE;
+                            btn2.Location = new Point(panel2.Controls.Count * (btn.Width + GAP), panel2.Height / 2 - btn.Height);
+
+                            Arr[i] = val;
+                            BArr[i] = btn;
+                            panel1.Controls.Add(btn);
+
+                            Arr[i] = sodu;
+                            BArr[i] = btn2;
+                            panel2.Controls.Add(btn2);
+
+                            lbl4.Text = Convert.ToString(sodu) + lbl4.Text;
+
+                            btn2.BackColor = Color.ForestGreen;
+                            btn2.ForeColor = Color.White;
+
+                            n /= 2;
+                            i = i + 1;
+
+                            tam = tam + 1;
+                        }
+                        lbl5.Text = "Kết Quả";
+
+                        if (tam == 1)
+                        {
+                            await Task.Delay(2000);
+                            pic6.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        if (tam == 2)
+                        {
+                            await Task.Delay(1000);
+                            pic1.Show();
+                            await Task.Delay(1000);
+                            pic6.Show();
+                            await Task.Delay(2000);
+                            pic7.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        if (tam == 3)
+                        {
+                            await Task.Delay(1000);
+                            pic1.Show();
+                            await Task.Delay(1000);
+                            pic6.Show();
+                            await Task.Delay(1000);
+                            pic2.Show();
+                            await Task.Delay(1000);
+                            pic7.Show();
+                            await Task.Delay(2000);
+                            pic8.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        if (tam == 4)
+                        {
+                            await Task.Delay(1000);
+                            pic1.Show();
+                            await Task.Delay(1000);
+                            pic6.Show();
+                            await Task.Delay(1000);
+                            pic2.Show();
+                            await Task.Delay(1000);
+                            pic7.Show();
+                            await Task.Delay(1000);
+                            pic3.Show();
+                            await Task.Delay(1000);
+                            pic8.Show();
+                            await Task.Delay(2000);
+                            pic9.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        if (tam == 5)
+                        {
+                            await Task.Delay(1000);
+                            pic1.Show();
+                            await Task.Delay(1000);
+                            pic6.Show();
+                            await Task.Delay(1000);
+                            pic2.Show();
+                            await Task.Delay(1000);
+                            pic7.Show();
+                            await Task.Delay(1000);
+                            pic3.Show();
+                            await Task.Delay(1000);
+                            pic8.Show();
+                            await Task.Delay(1000);
+                            pic4.Show();
+                            await Task.Delay(1000);
+                            pic9.Show();
+                            await Task.Delay(2000);
+                            pic10.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        if (tam == 6)
+                        {
+                            await Task.Delay(1000);
+                            pic1.Show();
+                            await Task.Delay(1000);
+                            pic6.Show();
+                            await Task.Delay(1000);
+                            pic2.Show();
+                            await Task.Delay(1000);
+                            pic7.Show();
+                            await Task.Delay(1000);
+                            pic3.Show();
+                            await Task.Delay(1000);
+                            pic8.Show();
+                            await Task.Delay(1000);
+                            pic4.Show();
+                            await Task.Delay(1000);
+                            pic9.Show();
+                            await Task.Delay(1000);
+                            pic5.Show();
+                            await Task.Delay(1000);
+                            pic10.Show();
+                            await Task.Delay(2000);
+                            pic11.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        pic12.Show();
+                        label6.Show();
+                        await Task.Delay(1000);
+
+                        lbl4.Show();
+                        lbl5.Show();
                         await Task.Delay(1000);
                     }
-
-                    if (tam == 2)
-                    {
-                        await Task.Delay(1000);
-                        pic1.Show();
-                        await Task.Delay(1000);
-                        pic6.Show();
-                        await Task.Delay(2000);
-                        pic7.Show();
-                        await Task.Delay(1000);
-                    }
-
-                    if (tam == 3)
-                    {
-                        await Task.Delay(1000);
-                        pic1.Show();
-                        await Task.Delay(1000);
-                        pic6.Show();
-                        await Task.Delay(1000);
-                        pic2.Show();
-                        await Task.Delay(1000);
-                        pic7.Show();
-                        await Task.Delay(2000);
-                        pic8.Show();
-                        await Task.Delay(1000);
-                    }
-
-                    if (tam == 4)
-                    {
-                        await Task.Delay(1000);
-                        pic1.Show();
-                        await Task.Delay(1000);
-                        pic6.Show();
-                        await Task.Delay(1000);
-                        pic2.Show();
-                        await Task.Delay(1000);
-                        pic7.Show();
-                        await Task.Delay(1000);
-                        pic3.Show();
-                        await Task.Delay(1000);
-                        pic8.Show();
-                        await Task.Delay(2000);
-                        pic9.Show();
-                        await Task.Delay(1000);
-                    }
-
-                    if (tam == 5)
-                    {
-                        await Task.Delay(1000);
-                        pic1.Show();
-                        await Task.Delay(1000);
-                        pic6.Show();
-                        await Task.Delay(1000);
-                        pic2.Show();
-                        await Task.Delay(1000);
-                        pic7.Show();
-                        await Task.Delay(1000);
-                        pic3.Show();
-                        await Task.Delay(1000);
-                        pic8.Show();
-                        await Task.Delay(1000);
-                        pic4.Show();
-                        await Task.Delay(1000);
-                        pic9.Show();
-                        await Task.Delay(2000);
-                        pic10.Show();
-                        await Task.Delay(1000);
-                    }
-
-                    if (tam == 6)
-                    {
-                        await Task.Delay(1000);
-                        pic1.Show();
-                        await Task.Delay(1000);
-                        pic6.Show();
-                        await Task.Delay(1000);
-                        pic2.Show();
-                        await Task.Delay(1000);
-                        pic7.Show();
-                        await Task.Delay(1000);
-                        pic3.Show();
-                        await Task.Delay(1000);
-                        pic8.Show();
-                        await Task.Delay(1000);
-                        pic4.Show();
-                        await Task.Delay(1000);
-                        pic9.Show();
-                        await Task.Delay(1000);
-                        pic5.Show();
-                        await Task.Delay(1000);
-                        pic10.Show();
-                        await Task.Delay(2000);
-                        pic11.Show();
-                        await Task.Delay(1000);
-                    }
-
-                    pic12.Show();
-                    label6.Show();
-                    await Task.Delay(1000);
-
-                    lbl4.Show();
-                    lbl5.Show();
-                    await Task.Delay(1000);
-                }
+                }    
             }
         }
 

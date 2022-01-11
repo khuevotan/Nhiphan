@@ -18,6 +18,18 @@ namespace CDNP
             InitializeComponent();
         }
 
+        static bool IsNumeric(string value)
+        {
+            try
+            {
+                int number;
+                bool result = int.TryParse(value, out number);
+                return result;
+            }
+            catch (Exception ex) 
+            { return false; }
+        }
+
         string daoNguoc(string s)
         {
             string dao = "";
@@ -25,14 +37,6 @@ namespace CDNP
             for (int i = l - 1; i >= 0; --i)
                 dao = dao + s[i];
             return dao;
-        }
-
-        string xoaKyTuCuoi(string s)
-        {
-            string r = "";
-            for (int i = 0; i < s.Length - 1; ++i)
-                r += s[i];
-            return r;
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -44,39 +48,37 @@ namespace CDNP
             }
             else
             {
-                int tp = Convert.ToInt32(txt1.Text);
-                for (ulong i = 0; i < Math.Pow(2, tp); i++)
+                if (IsNumeric(txt1.Text) == false)
                 {
-                    ulong x = i;
-                    string s = "";
-                    while (x != 0)
-                    {
-                        if (x % 2 == 1)
-                            s = s + "1";
-                        else
-                            s = s + "0";
-                        x /= 2;
-                    }
-
-                    if (s == "")
-                        s = "0";
-                    else
-                        for (int j = s.Length - 1; j > 0; --j)
-                        {
-                            if (s[j] == '1' || s.Length == 1)
-                                break;
-                            else
-                                s = xoaKyTuCuoi(s);
-                        }
-                    s = daoNguoc(s) + " ";
-                    StreamWriter ghi = new StreamWriter("out1.txt", true);
-                    ghi.WriteLine(s);
-                    ghi.Close();
-                    rtxt1.Text = rtxt1.Text + Convert.ToString(s) + " ";
+                    MessageBox.Show("Vui lòng nhập số nguyên n!");
                 }
-                MessageBox.Show("Hoàn thành!");
-            }
-                
+                else
+                {
+                    int tp = Convert.ToInt32(txt1.Text);
+                    for (ulong i = 0; i < Math.Pow(2, tp); i++)
+                    {
+                        ulong x = i;
+                        string s = "";
+                        while (x != 0)
+                        {
+                            if (x % 2 == 1)
+                                s = s + "1";
+                            else
+                                s = s + "0";
+                            x /= 2;
+                        }
+
+                        if (s == "")
+                            s = "0";
+                        s = daoNguoc(s) + " ";
+                        StreamWriter ghi = new StreamWriter("out1.txt", true);
+                        ghi.WriteLine(s);
+                        ghi.Close();
+                        rtxt1.Text = rtxt1.Text + Convert.ToString(s) + " ";
+                    }
+                    MessageBox.Show("Hoàn thành!");
+                }    
+            }   
         }
 
         private void btn1_Click(object sender, EventArgs e)

@@ -45,6 +45,7 @@ namespace CDNP
                 if (rdo5.Checked == true && rdo6.Checked == true)
                     MessageBox.Show("Vui lòng chọn lại!");
 
+                // thap phan sang nhị phân
                 if (rdo1.Checked == true && rdo3.Checked == true)
                 {
                     int tp = Convert.ToInt32(txt1.Text);
@@ -62,6 +63,7 @@ namespace CDNP
                     }
                 }
 
+                //nhị phân sang thập phân
                 double dec = 0;
                 int i = 0;
                 if (rdo2.Checked == true && rdo4.Checked == true)

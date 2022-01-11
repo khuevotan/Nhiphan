@@ -29,22 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
-            this.pic1 = new System.Windows.Forms.PictureBox();
             this.pic2 = new System.Windows.Forms.PictureBox();
+            this.pic1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pic1
-            // 
-            this.pic1.Image = ((System.Drawing.Image)(resources.GetObject("pic1.Image")));
-            this.pic1.Location = new System.Drawing.Point(343, 132);
-            this.pic1.Name = "pic1";
-            this.pic1.Size = new System.Drawing.Size(135, 44);
-            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic1.TabIndex = 23;
-            this.pic1.TabStop = false;
             // 
             // pic2
             // 
@@ -55,6 +45,16 @@
             this.pic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic2.TabIndex = 26;
             this.pic2.TabStop = false;
+            // 
+            // pic1
+            // 
+            this.pic1.Image = ((System.Drawing.Image)(resources.GetObject("pic1.Image")));
+            this.pic1.Location = new System.Drawing.Point(343, 132);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(135, 44);
+            this.pic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic1.TabIndex = 23;
+            this.pic1.TabStop = false;
             // 
             // button3
             // 
@@ -76,16 +76,16 @@
             this.Controls.Add(this.pic1);
             this.Name = "Form7";
             this.Text = "Form7";
-            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.PictureBox pic2;
+        private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.Button button3;
     }
 }

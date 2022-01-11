@@ -48,15 +48,6 @@ void muc_01()
         
         if(s == "")
         	s= "0";
-        else
-        for(ll i = doDai(s)-1; i > 0; --i)
-        {
-            if(s[i] == '1' || doDai(s) == 1 )
-				break;
-            else
-                s = xoaKyTuCuoi(s);
-        }
-	
         s = daoNguoc(s);
         cout << s << "\n";
     }
