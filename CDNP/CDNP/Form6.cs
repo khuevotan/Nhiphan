@@ -28,6 +28,8 @@ namespace CDNP
             pic10.Hide();
             pic11.Hide();
             pic12.Hide();
+            pictureBox4.Hide();
+            pictureBox5.Hide();
             label5.Hide();
             label4.Hide();
             label6.Hide();
@@ -49,6 +51,8 @@ namespace CDNP
             pic10.Hide();
             pic11.Hide();
             pic12.Hide();
+            pictureBox4.Hide();
+            pictureBox5.Hide();
             label5.Hide();
             label4.Hide();
             label6.Hide();
@@ -73,34 +77,6 @@ namespace CDNP
         const int HEIGHT = 100;
         const int SIZE = 50;
 
-        private void dichuyen(int i)
-        {
-            Status st = new Status();
-            st.Pos1 = i;
-            // st.Pos2 = j;
-            st.type = MoveType.MOVE_TOP_DOWN;
-            for (int x = 0; x < SIZE; x++)
-            {
-                backgroundWorker1.ReportProgress(0, st);
-                System.Threading.Thread.Sleep(10);
-            }
-            st.type = MoveType.MOVE_LEFT_RiGHT;
-            // int Distance = Math.Abs(i - j) * (SIZE + GAP);
-            // for (int x = 0; x < Distance; x++)
-            {
-                backgroundWorker1.ReportProgress(0, st);
-                System.Threading.Thread.Sleep(10);
-            }
-            st.type = MoveType.MOVE_IN_LINE;
-            for (int x = 0; x < SIZE; x++)
-            {
-                backgroundWorker1.ReportProgress(0, st);
-                System.Threading.Thread.Sleep(10);
-            }
-            st.type = MoveType.MOVED;
-            backgroundWorker1.ReportProgress(0, st);
-            System.Threading.Thread.Sleep(10);
-        }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -109,46 +85,17 @@ namespace CDNP
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            Status st = e.UserState as Status;
-            if (st == null) return;
-            if (st.type == MoveType.MOVED)
-            {
-                Button tmp = BArr[st.Pos1];
-                BArr[st.Pos1] = BArr[st.Pos2];
-                BArr[st.Pos2] = tmp;
-                return;
-            }
-            Button btn1 = BArr[st.Pos1];
-            Button btn2 = BArr[st.Pos2];
-            if (st.type == MoveType.MOVE_TOP_DOWN)
-            {
-                btn1.Top = btn1.Top + 1;
-                btn2.Top = btn2.Top - 1;
-            }
-            else if (st.type == MoveType.MOVE_LEFT_RiGHT)
-            {
-                btn1.Left = btn1.Left - 1;
-                btn2.Left = btn2.Left + 1;
-            }
-            else if (st.type == MoveType.MOVE_IN_LINE)
-            {
-                btn1.Top = btn1.Top - 1;
-                btn2.Top = btn2.Top + 1;
-            }
+ 
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            foreach (Button btn in panel1.Controls)
-            {
-                btn.BackColor = Color.ForestGreen;
-                btn.ForeColor = Color.White;
-            }
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            backgroundWorker1.RunWorkerAsync();
+            //backgroundWorker1.RunWorkerAsync();
         }
 
         private async void button1_Click_1(object sender, EventArgs e)
@@ -166,9 +113,9 @@ namespace CDNP
                 else
                 {      
                     int k = Convert.ToInt32(textBox1.Text);
-                    if (Convert.ToInt32(k) <= 0 || Convert.ToInt32(k) > 63)
+                    if (Convert.ToInt32(k) <= 0 || Convert.ToInt32(k) > 100)
                     {
-                        MessageBox.Show("Vui lòng nhập lại n (0<n<63)!");
+                        MessageBox.Show("Vui lòng nhập lại n (0<n<100)!");
                     }
                     else
                     {
@@ -317,6 +264,37 @@ namespace CDNP
                             pic10.Show();
                             await Task.Delay(2000);
                             pic11.Show();
+                            await Task.Delay(1000);
+                        }
+
+                        if (tam == 7)
+                        {
+                            await Task.Delay(1000);
+                            pic1.Show();
+                            await Task.Delay(1000);
+                            pic6.Show();
+                            await Task.Delay(1000);
+                            pic2.Show();
+                            await Task.Delay(1000);
+                            pic7.Show();
+                            await Task.Delay(1000);
+                            pic3.Show();
+                            await Task.Delay(1000);
+                            pic8.Show();
+                            await Task.Delay(1000);
+                            pic4.Show();
+                            await Task.Delay(1000);
+                            pic9.Show();
+                            await Task.Delay(1000);
+                            pic5.Show();
+                            await Task.Delay(1000);
+                            pic10.Show();
+                            await Task.Delay(1000);
+                            pictureBox4.Show();
+                            await Task.Delay(1000);
+                            pic11.Show();
+                            await Task.Delay(2000);
+                            pictureBox5.Show();
                             await Task.Delay(1000);
                         }
 

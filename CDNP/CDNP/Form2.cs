@@ -59,7 +59,7 @@ namespace CDNP
                     {
                         ulong x = i;
                         string s = "";
-                        while (x != 0)
+                        for (int j = 0; j < tp; j++)
                         {
                             if (x % 2 == 1)
                                 s = s + "1";
@@ -68,8 +68,6 @@ namespace CDNP
                             x /= 2;
                         }
 
-                        if (s == "")
-                            s = "0";
                         s = daoNguoc(s) + " ";
                         StreamWriter ghi = new StreamWriter("out1.txt", true);
                         ghi.WriteLine(s);
