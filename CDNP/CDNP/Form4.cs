@@ -54,7 +54,7 @@ namespace CDNP
                         x[i] = false;
                     }
 
-                    // đánh dấu 2 vị trí được chọn để chứa 2 cặp "01"
+                    // đánh dấu 2 vị trí được chọn để chứa 2 cặp "01" -- duyệt cặp 01
                     for (int i = 0; i < n - 1; i++)
                     {
                         x[i] = true;
@@ -120,8 +120,6 @@ namespace CDNP
                         x[i] = false;
                         x[i + 1] = false;
                     }
-
-                   
                   MessageBox.Show("Hoàn thành!");
                 }
             }
