@@ -1,65 +1,78 @@
 #include <bits/stdc++.h>
 #include <iostream>
-#define ll long long
 using namespace std;
 
-int doDai(string s)
-{
-    int cnt = 0;
-    for (int i = 0; s[i] != NULL; i++)
-        cnt++;
-    return cnt;
+void writeToFile(const char* fileName, string binStr) {
+    fstream f(fileName,  ios::app);
+    f << binStr << endl;
+    f.close();
 }
 
-string daoNguoc(string s)
+void LietKeDayNhiPhan0101(int n)
 {
-    string dao("");
-    int l = doDai(s);
-    for (int i = l - 1; i >= 0; --i)
-        dao += s[i];
-    return dao;
-}
-
-void muc_02(int n)
-{
-    for (int i = 0; i < n - 1; i++)
+	
+    bool* x = new bool[n];
+    unsigned short* y = new unsigned short[n];
+ 
+    for (int i = 0 ; i < n ; i++)
     {
-        for (int j = i + 2; j < n - 1; j++)
-        {
-            string h = "";
-            for (int e = 0; e < n; e++)
-            {
-                if (e == i || e == j)
-                    h = h + "1";
-                else
-                    h = h + "0";
-            }
-            h = daoNguoc(h);
-            cout << h << "\n";
-        }
+        x[i] = false;
     }
-    
- 	cout <<  "\n";
- 	if (n > 4)
-    for (int i = 0; i < n - 1; i++)
+
+    for (int i = 0 ; i < n - 1 ; i++)
     {
-        for (int j = i + 2; j < n - 1; j++)
+        x[i] = true;
+        x[i+1] = true;
+        for (int j = i + 2 ; j < n - 1 ; j++)
         {
-            string s = "";
-            for (int e = 0; e < n; e++)
+            x[j] = true;
+            x[j+1] = true;
+ 
+            for (int p = 0 ; p < n ; p++)
             {
-                if (e == i || e == j)
-                    s = s + "0";
+                if (x[p] == true)
+                {
+                    y[p] = 0;
+                    y[p+1] = 1;
+                    p++;
+                }
                 else
-                    s = s + "1";
+                    y[p] = 0;
             }
-            cout << s << "\n";
+ 
+            int q = 0;
+            do
+            {  
+                for (int p = 0 ; p < n ; p++)
+                    cout <<(int)y[p]<<"";
+                cout << "\n";
+ 
+                while (q < n)
+                {
+                    if (x[q] == false && y[q] == 0)
+                    {
+                        y[q] = 1;
+                        break;
+                    }  
+                    q++;
+                }
+ 
+            } while (q < n);
+ 
+            x[j] = false;
+            x[j+1] = false;
         }
-    } 
+        x[i] = false;
+        x[i+1] = false;
+    }
+ 
+    delete[] x;
+    delete[] y;
 }
 
-int main() {
-    int n;
+int main()
+{
+	 int n;
     freopen("input.txt", "r", stdin);
     cin >> n;
     if (n > 100)
@@ -71,9 +84,8 @@ int main() {
             cout << "Do dai n khong du de thuc hien bai toan";
         else {
             cout << "Chuoi 01 xuat hien 2 lan \n";
-            muc_02(n);
+            LietKeDayNhiPhan0101(n);
         }
     }
     return 0;
 }
-

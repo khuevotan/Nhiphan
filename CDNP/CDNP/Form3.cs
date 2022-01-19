@@ -32,12 +32,14 @@ namespace CDNP
 
         int [] a = new int[1000];
         string s;
-        void output( int n)
+        int n;
+
+        void inra(int n)
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                s = s + Convert.ToString(a[i]);
-            }
+		        s = s + Convert.ToString(a[i]);
+	        }
             StreamWriter ghi = new StreamWriter("out2.txt", true);
             ghi.WriteLine(s);
             ghi.Close();
@@ -45,15 +47,15 @@ namespace CDNP
             s = "";
         }
 
-        void tim(int i, int n)
+        void deQuy(int i, int n)
         {
             for (int j = 0; j <= 1; j++)
             {
                 a[i] = j;
-                if (i == n - 1)   //nếu tìm đến x i cuối cùng thì xuất ra ket quả
-                    output(n);
+                if (i == n)
+                    inra(n);
                 else
-                    tim(i + 1, n); // chưa tìm đến i cuối thì tăng i lên
+                    deQuy(i + 1, n);
             }
         }
 
@@ -65,7 +67,7 @@ namespace CDNP
               MessageBox.Show("Chú ý nhập lại n (0<n<=100)");
             else
             {
-                tim(0, n);
+                deQuy(1, n);
                 MessageBox.Show("Hoàn thành!");
             }
         }

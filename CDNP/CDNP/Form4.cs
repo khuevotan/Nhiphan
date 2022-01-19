@@ -30,15 +30,7 @@ namespace CDNP
             lbl1.Text = n;
         }
 
-        string daoNguoc(string s)
-        {
-            string dao = "";
-            int l = s.Length;
-            for (int i = l - 1; i >= 0; --i)
-                dao = dao + s[i];
-            return dao;
-        }
-
+        // liệt kê dãy nhị phân độ dài n trong đó "01" xuất hiện đúng 2 lần
         private void btn2_Click(object sender, EventArgs e)
         {
             int n = Convert.ToInt32(lbl1.Text);
@@ -51,46 +43,86 @@ namespace CDNP
                     MessageBox.Show("Độ dài n không đủ thực hiện bài toán, Nhập lại n!");
                 else
                 {
-                    for (int i = 0; i < n - 1; i++)
+                    // tạo mảng n phần tử có giá trị false
+                    bool[] x = new bool[n];
+
+                    // tạo mảng n phần tử có giá trị 0
+                    int[] y = new int[n];
+
+                    for (int i = 0; i < n; i++)
                     {
-                        for (int j = i + 2; j < n - 1; j++)
-                        {
-                            string h = "";
-                            for (int k = 0; k < n; k++)
-                            {
-                                if (k == i || k == j)
-                                    h = h + "1";
-                                else
-                                    h = h + "0";
-                            }
-                            h = daoNguoc(h);
-                            StreamWriter ghi = new StreamWriter("out3.txt", true);
-                            ghi.WriteLine(h);
-                            ghi.Close();
-                            rtxt1.Text = rtxt1.Text + Convert.ToString(h) + " ";
-                        }
+                        x[i] = false;
                     }
 
-                    if (n > 4)
-                        for (int i = 0; i < n - 1; i++)
+                    // đánh dấu 2 vị trí được chọn để chứa 2 cặp "01"
+                    for (int i = 0; i < n - 1; i++)
+                    {
+                        x[i] = true;
+                        x[i + 1] = true;
+                        for (int j = i + 2; j < n - 1; j++)
                         {
-                            for (int j = i + 2; j < n - 1; j++)
+                            x[j] = true;
+                            x[j + 1] = true;
+
+                            // sau khi chọn được 2 vị trí cho 2 cặp 01, thì
+                            // điền các giá trị 01 vào các vị trí đó
+                            // và điển giá trị 0 vào các vị trí còn lại
+                            for (int p = 0; p < n; p++)
                             {
-                                string s = "";
-                                for (int k = 0; k < n; k++)
+                                if (x[p] == true)
                                 {
-                                    if (k == i || k == j)
-                                        s = s + "0";
-                                    else
-                                        s = s + "1";
+                                    y[p] = 0;
+                                    y[p + 1] = 1;
+                                    p++;
                                 }
-                                StreamWriter ghi = new StreamWriter("out3.txt", true);
-                                ghi.WriteLine(s);
-                                ghi.Close();
-                                rtxt1.Text = rtxt1.Text + Convert.ToString(s) + " ";
+                                else
+                                    y[p] = 0;
                             }
+
+                            int q = 0;
+                            do
+                            {
+                                // xuất output
+                                int s;
+                                string h = "";
+                                for (int p = 0; p < n; p++)
+                                {
+                                    s = y[p];
+                                    h = h + Convert.ToString(s);
+
+                                    // in ra màn h
+                                    rtxt1.Text = rtxt1.Text + Convert.ToString(s);
+                                }
+
+                                rtxt1.Text = rtxt1.Text + " ";
+                                //file text
+                                StreamWriter ghi = new StreamWriter("out3.txt", true);
+                                ghi.WriteLine(h);
+                                ghi.Close();
+
+                                // duyệt từ trái sang phải, nếu vị trí đó khác 2 vị trí đã
+                                // chọn và giá trị tại đó là 0 thì gán thành 1
+                                while (q < n)
+                                {
+                                    if (x[q] == false && y[q] == 0)
+                                    {
+                                        y[q] = 1;
+                                        break;
+                                    }
+                                    q++;
+                                }
+
+                            } while (q < n);
+
+                            x[j] = false;
+                            x[j + 1] = false;
                         }
-                    MessageBox.Show("Hoàn thành!");
+                        x[i] = false;
+                        x[i + 1] = false;
+                    }
+
+                   
+                  MessageBox.Show("Hoàn thành!");
                 }
             }
         }
