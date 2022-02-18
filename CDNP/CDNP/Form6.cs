@@ -170,6 +170,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pic6.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         if (tam == 2)
@@ -181,6 +182,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pic7.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         if (tam == 3)
@@ -196,6 +198,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pic8.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         if (tam == 4)
@@ -215,6 +218,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pic9.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         if (tam == 5)
@@ -238,6 +242,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pic10.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         if (tam == 6)
@@ -265,6 +270,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pic11.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         if (tam == 7)
@@ -296,6 +302,7 @@ namespace CDNP
                             await Task.Delay(2000);
                             pictureBox5.Show();
                             await Task.Delay(1000);
+                            tam = 0;
                         }
 
                         pic12.Show();
@@ -305,8 +312,10 @@ namespace CDNP
                         lbl4.Show();
                         lbl5.Show();
                         await Task.Delay(1000);
+                        
                     }
-                }    
+                    
+                }
             }
         }
 
